@@ -1,6 +1,6 @@
 # me
 
-个人跨项目工作规范 skill，统一项目开发规则、设计规范和工具偏好，适用于 Codex 与 Claude Code。当前版本 **4.0.0**。包含条件性的个人工具偏好，用户要求、项目约束与现有技术栈优先。
+个人跨项目工作规范 skill，统一项目开发规则、设计规范和工具偏好，适用于 Codex 与 Claude Code。当前版本 **4.0.1**。包含条件性的个人工具偏好，用户要求、项目约束与现有技术栈优先。
 
 ## 安装与调用
 
@@ -38,6 +38,10 @@ me/
 [SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与工具](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)。明确微调无需加载所有参考。
 
 README 与 CHANGELOG 给维护者阅读，运行技能无需加载。该技能不依赖远程页面，不需要脚本、素材、MCP 或特定设计工具；`agents/openai.yaml` 为可选展示元数据。
+
+## 编写原则
+
+只保留会改变执行选择的个人偏好与项目约定；Codex、Claude Code 等 agent 已有的通用步骤不在技能中重复展开。影响实际行为的例外仍需明确，例如居中弹窗、组件选型、环境复用及验证范围。此原则不意味着各 agent 的默认行为完全一致。
 
 ## 使用边界
 
