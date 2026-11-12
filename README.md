@@ -1,30 +1,44 @@
-# Design
+# me
 
-个人跨项目设计与前端实现规范，不绑定业务、技术栈或视觉风格。当前版本 **3.6.1**，仓库当前为**公开**状态。
+个人跨项目 UI 设计 skill，不绑定业务、技术栈或视觉风格。当前规范版本 **3.6.2**。
 
-- [DESIGN-CORE.md：局部修改的快速入口](DESIGN-CORE.md)
-- [DESIGN.md：新页面与设计决策的完整规范](DESIGN.md)
-- [CHANGELOG.md：版本与历史变更](CHANGELOG.md)
-- 参考站点与性能细则由 DESIGN.md 按任务链接，不要求全部读取。
+## 安装与调用
 
-## 使用方式
+将本仓库下载或克隆到用户技能目录 `~/.agents/skills/me/`：
 
-向 AI 提供：
+```sh
+git clone https://github.com/Avlonjune7/me.git ~/.agents/skills/me
+```
 
-> UI 任务按 https://github.com/Avlonjune7/Design/blob/main/DESIGN.md 执行；先复用项目已有组件与设计，按任务范围读取规范并验证实际效果。
+安装后在 Codex 中使用 `$me`，例如“用 $me 优化这个页面”。技能也可根据 UI 任务自动匹配；若未显示，重启 Codex。不要同时安装多个同名副本。
 
-小组件、表单及微调直接实施并局部验证；新 React 项目适用时优先 Astryx；选用后以其组件、主题和模板为基准，Oil UI Pro 按需完善布局与体验。已有项目不自动换库。组件复用、性能、响应式、无障碍与实际渲染验收要求见完整规范，技能分工不在此重复维护。
+## 文件结构
 
-提供链接不等于 AI 已读取。无法访问时提供文件或本地副本；文档不会因存入 GitHub 自动注入对话，技能是否可用以当前环境为准。
+```text
+me/
+├── SKILL.md
+├── references/
+│   ├── DESIGN-CORE.md
+│   ├── DESIGN.md
+│   ├── inspiration.md
+│   └── performance.md
+├── README.md
+└── CHANGELOG.md
+```
 
-## 项目接入
+- [SKILL.md](SKILL.md)：技能入口与适用范围。
+- [快速规范](references/DESIGN-CORE.md)：局部明确修改。
+- [完整规范](references/DESIGN.md)：新页面与设计决策，按相关章节读取。
+- [变更记录](CHANGELOG.md)：版本与历史变更。
 
-在项目现有代理说明中引用本规范，保留项目自身约束。个人本地副本放在 `~/.codex/design/`，包含 `DESIGN-CORE.md`、`DESIGN.md`、`references/` 与记录上游提交的 `UPSTREAM.json`；优先读本地，缺失再取远端。
+`references/` 按任务读取，不要求全部加载。README 与 CHANGELOG 用于仓库说明，不是技能运行时必读文件。此技能只提供设计指引，无需脚本、素材或工具依赖；`agents/openai.yaml` 是可选项。
 
-仅明确更新规范时同步副本，不在每次任务前联网检查版本。项目自有 DESIGN.md 保留项目决定，不自动覆盖；旧聊天的工作副本不作为当前规范入口。本仓库不记录机器安装详情或临时环境状态。
+## 项目接入与维护
 
-## 维护
+用户明确要求、项目约束与现有实现优先。在项目代理说明中引用 `$me` 或本仓库技能入口，保留项目自身决定，不覆盖项目专属 DESIGN.md。
 
-仅纳入经过验证、可跨项目复用的经验；项目特例留在项目内，无新经验不强行更新。规则变动同步更新 DESIGN.md 与 CHANGELOG.md，说明变更、原因、范围及实际同步状态。
+仅明确更新规范时同步安装副本，不在每次任务前联网检查版本。旧 `~/.codex/design/` 副本不自动更新；需要沿用的旧项目引用应单独迁移。
+
+仅纳入经过验证、可跨项目复用的经验；项目特例留在项目内。规则变动同步更新完整规范、快速入口及 CHANGELOG，说明原因、范围与实际同步状态。
 
 版本约定：文字澄清递增补丁版本，兼容性新增递增次版本，改变既有规则含义或适用边界递增主版本。
