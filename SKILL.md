@@ -1,6 +1,6 @@
 ---
 name: me
-description: "个人开发与 UI 偏好：用于开发、调试、重构或整理项目规范；不用于一般问答或无关写作。"
+description: "个人开发、UI 与安装偏好：用于开发、调试、重构、整理项目规范或安装个人软件与工具；不用于一般问答或无关写作。"
 ---
 
 # me
@@ -9,7 +9,7 @@ description: "个人开发与 UI 偏好：用于开发、调试、重构或整�
 
 | 任务 | 参考 |
 | --- | --- |
-| 功能开发、调试、重构或整理项目规范 | [项目约定](references/project.md) |
+| 开发、调试、重构、项目规范或个人软件与工具安装 | [项目约定](references/project.md) |
 | 前端组件选型、公共组件或新项目 UI 初始化 | [组件与工具](references/components.md) |
 | UI 修改或设计，含微调、新页面、布局与交互 | [视觉偏好](references/visual-ux.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md) |
