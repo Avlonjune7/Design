@@ -15,5 +15,6 @@ description: "个人开发与 UI 偏好：用于开发、调试、重构、整�
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md) |
 | 项目无可复用方向，或用户要求案例 | [设计参考](references/inspiration.md) |
 | 脚本、CI 或 UI 验证 | [验证偏好](references/verification.md) |
+| 用户要求网页专项审查，或 UI 出现质量疑点 | [网页审查](references/web-review.md)，按相关范围检查 |
 
 微调复用现有实现，后端不加载 UI 参考。

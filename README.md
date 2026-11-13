@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **4.1.1**。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **4.2.0**。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -28,6 +28,7 @@ me/
 │   ├── project.md
 │   ├── components.md
 │   ├── visual-ux.md
+│   ├── web-review.md
 │   ├── verification.md
 │   ├── inspiration.md
 │   └── performance.md
@@ -35,7 +36,7 @@ me/
 └── CHANGELOG.md
 ```
 
-[SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与工具](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)。明确微调无需加载所有参考。
+[SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与工具](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)、[网页审查](references/web-review.md)。明确微调无需加载所有参考。
 
 README 与 CHANGELOG 仅在维护任务或项目流程需要时读取。该技能不依赖远程页面，不需要脚本、素材、MCP 或特定设计工具；`agents/openai.yaml` 为可选展示元数据。个人设计偏好已由 references 承接，不再加载旧 `~/.codex/design` 副本。
 
