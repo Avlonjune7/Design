@@ -1,5 +1,12 @@
 # 变更记录
 
+## 4.0.2 — 2026-11-13
+
+- 与精简版全局 AGENTS.md 配套：全局保留通用约定，me 承接专项工具、设计与验证细则，减少重复维护。
+- 补齐 ast-grep、jq/yq/sqlite3、uv/uvx 的条件选择，以及 ShellCheck、PSScriptAnalyzer、actionlint 和 Playwright CLI 的适用范围；已有授权无需逐步确认。
+- README/CHANGELOG 改为按需读取；UI 入口覆盖微调，项目设计优先，不再加载已被 references 替代的旧 design 副本。
+- 范围：GitHub main 与本机 me 执行文件，并配套同步 codex-global-agent；检查技能结构、引用与差异，不宣称实际任务性能收益。
+
 ## 4.0.1 — 2026-11-13
 
 - 按用户要求审查冲突与重复，删除通用能力提示、冗余示例和重复验证步骤，保留会影响选择的个人偏好。
