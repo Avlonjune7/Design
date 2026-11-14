@@ -1,6 +1,6 @@
 ---
 name: me
-description: "个人 UI、项目初始化、规范整理与开发工具安装偏好。用于 UI 设计与组件选型、新项目初始化、整理项目规范及安装开发工具。"
+description: "个人 UI、浏览器验证、项目初始化、规范整理与开发工具安装偏好。用于 UI 设计与组件选型、线上登录态排查与页面验收、新项目初始化、整理项目规范及安装开发工具。"
 ---
 
 # me
@@ -19,7 +19,7 @@ description: "个人 UI、项目初始化、规范整理与开发工具安装偏
 | 视觉、布局或交互设计需要判断 | [视觉偏好](references/visual-ux.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md)，React / Next.js 使用 Vercel 官方技能 |
 | 项目无可复用方向，或用户要求案例 | [设计参考](references/inspiration.md) |
-| 需要选择脚本、CI 或 UI 验证方式 | [验证偏好](references/verification.md) |
+| 线上登录态排查、浏览器操作、页面验收，或选择脚本与 CI 验证方式 | [验证偏好](references/verification.md)，线上登录态优先 BrowserSkill，本地独立测试优先 Playwright CLI |
 | 用户要求网页专项审查，或 UI 出现质量疑点 | [网页审查](references/web-review.md)，使用 Vercel 官方技能 |
 
 用户要求深入讨论或挑战方案时使用 grilling，讨论需文档落地时使用 grill-with-docs，复杂业务概念需梳理时使用 domain-modeling。
