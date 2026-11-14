@@ -5,6 +5,7 @@
 | 条件 | 选择 |
 | --- | --- |
 | 新 React 项目尚未选库 | 优先 Astryx；项目样板优先，缺适用样板再选官方模板 |
+| React 复杂组件重构、布尔参数膨胀或可复用组件 API 设计 | 使用官方 vercel-composition-patterns，按问题读取对应规则，结合项目 React 版本应用 |
 | 新 Vue 项目尚未选库 | 优先 shadcn-vue CLI |
 | 新布局或整体改版有具体设计问题 | Oil UI Pro；明确微调复用现有设计 |
 | 原生 Web API、浏览器兼容性或现代实现存在具体疑问 | Modern Web Guidance 按主题检索并读取匹配指南 |

@@ -19,7 +19,7 @@ description: "个人开发、CLI 与 UI 偏好。用于开发、调试、重构�
 | --- | --- |
 | 工具选型不明确、命令故障或大量输出需要处理 | [CLI 与执行效率](references/cli-efficiency.md) |
 | 初始化项目、安装开发工具、部署或整理项目规范 | [项目约定](references/project.md) |
-| 前端组件选型、公共组件或新项目 UI 初始化 | [组件与工具](references/components.md) |
+| 前端组件选型、公共组件设计与重构或新项目 UI 初始化 | [组件与工具](references/components.md) |
 | 视觉、布局或交互设计需要判断 | [视觉偏好](references/visual-ux.md) |
 | 页面加载、请求、资源或渲染性能 | [页面性能](references/performance.md)，React / Next.js 使用 Vercel 官方技能 |
 | 项目无可复用方向，或用户要求案例 | [设计参考](references/inspiration.md) |

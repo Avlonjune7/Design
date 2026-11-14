@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **5.0.0**。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **5.1.0**。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -39,7 +39,7 @@ me/
 
 [SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与工具](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)、[网页审查](references/web-review.md)。明确微调无需加载所有参考。
 
-README 与 CHANGELOG 仅在维护任务或项目流程需要时读取。React / Next.js 性能规则依赖官方 `vercel-react-best-practices`，网页审查依赖官方 `web-design-guidelines`，后者要求审查时获取最新远程规则。可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --agent codex --global --yes` 安装；`agents/openai.yaml` 为可选展示元数据。个人设计偏好已由 references 承接，不再加载旧 `~/.codex/design` 副本。
+README 与 CHANGELOG 仅在维护任务或项目流程需要时读取。React 复杂组件设计与重构使用官方 `vercel-composition-patterns`，按问题读取规则并遵循项目 React 版本。React / Next.js 性能规则依赖官方 `vercel-react-best-practices`，网页审查依赖官方 `web-design-guidelines`，后者要求审查时获取最新远程规则。可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装；`agents/openai.yaml` 为可选展示元数据。个人设计偏好已由 references 承接，不再加载旧 `~/.codex/design` 副本。
 
 核心目标是更快响应、更少 token，同时完成必要验证。工具选型不明确、命令故障或大量输出需要处理时读取 [CLI 与执行效率](references/cli-efficiency.md)，常规任务复用主文件规则和已有项目约定。全局 AGENTS.md 可用一条规则要求相关任务使用 me。当前 Windows 本机复制安装位于 `C:/Users/Tars/.agents/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
 
