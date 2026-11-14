@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **4.4.0**。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **4.4.1**。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -41,7 +41,7 @@ me/
 
 README 与 CHANGELOG 仅在维护任务或项目流程需要时读取。该技能不依赖远程页面，不需要脚本、素材、MCP 或特定设计工具；`agents/openai.yaml` 为可选展示元数据。个人设计偏好已由 references 承接，不再加载旧 `~/.codex/design` 副本。
 
-本地文件检索、数据处理、Git、数据库和构建测试按需读取 [CLI 与执行效率](references/cli-efficiency.md)。全局 AGENTS.md 可用一条规则要求相关任务使用 me。当前 Windows 本机复制安装位于 `C:/Users/Tars/.codex/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
+本地文件检索、数据处理、Git、数据库和构建测试按需读取 [CLI 与执行效率](references/cli-efficiency.md)。全局 AGENTS.md 可用一条规则要求相关任务使用 me。当前 Windows 本机复制安装位于 `C:/Users/Tars/.agents/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
 
 ## 编写原则
 
