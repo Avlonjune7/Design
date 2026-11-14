@@ -1,6 +1,6 @@
 # me
 
-个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。当前版本 **5.1.0**。项目约定优先，不重复 agent 的通用工作要求。
+个人跨项目偏好 skill，保留具体工具选择、安装目录、UI 偏好与专项验证方式，适用于 Codex 与 Claude Code。版本与变更见 [CHANGELOG](CHANGELOG.md)。项目约定优先，不重复 agent 的通用工作要求。
 
 ## 安装与调用
 
@@ -39,9 +39,22 @@ me/
 
 [SKILL.md](SKILL.md) 提供核心流程及触发条件，详细规则按任务读取：[项目开发](references/project.md)、[组件与工具](references/components.md)、[视觉与体验](references/visual-ux.md)、[验证与交付](references/verification.md)、[设计参考](references/inspiration.md)、[性能](references/performance.md)、[网页审查](references/web-review.md)。明确微调无需加载所有参考。
 
-README 与 CHANGELOG 仅在维护任务或项目流程需要时读取。React 复杂组件设计与重构使用官方 `vercel-composition-patterns`，按问题读取规则并遵循项目 React 版本。React / Next.js 性能规则依赖官方 `vercel-react-best-practices`，网页审查依赖官方 `web-design-guidelines`，后者要求审查时获取最新远程规则。可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装；`agents/openai.yaml` 为可选展示元数据。个人设计偏好已由 references 承接，不再加载旧 `~/.codex/design` 副本。
+README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGELOG。运行入口及场景路由保留在 SKILL.md。
 
-核心目标是更快响应、更少 token，同时完成必要验证。工具选型不明确、命令故障或大量输出需要处理时读取 [CLI 与执行效率](references/cli-efficiency.md)，常规任务复用主文件规则和已有项目约定。全局 AGENTS.md 可用一条规则要求相关任务使用 me。当前 Windows 本机复制安装位于 `C:/Users/Tars/.agents/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
+## 按需使用的外部能力
+
+| 场景 | 技能或工具 | 缺失时处理 |
+| --- | --- | --- |
+| React 复杂组件设计与重构 | vercel-composition-patterns | 沿用项目组件 API，结合项目 React 版本与官方资料 |
+| React / Next.js 性能 | vercel-react-best-practices | 用项目测量工具定位瓶颈并查对应官方资料 |
+| 网页专项审查 | web-design-guidelines | 依据项目规范和适用的 Web 标准检查，说明审查依据与覆盖缺口 |
+| 组件选型、视觉设计、现代 Web 实现 | Astryx、shadcn-vue CLI、Oil UI Pro、Modern Web Guidance | 复用项目组件和设计规范，按问题查官方资料 |
+| 浏览器验证 | Playwright CLI、BrowserSkill | 使用可用且满足登录态和验证目标的工具，报告未验证部分 |
+| 深入讨论、文档落地、领域建模 | grilling、grill-with-docs、domain-modeling | 直接完成所需讨论、文档或领域梳理 |
+
+这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
+
+核心目标是更快响应、更少 token，同时完成必要验证。工具选型不明确、命令故障或大量输出需要处理时读取 [CLI 与执行效率](references/cli-efficiency.md)，常规任务复用主文件规则和已有项目约定。全局代理说明文件（Codex 的 AGENTS.md / Claude Code 的 CLAUDE.md）可用一条规则要求相关任务使用 me，语言等始终适用的偏好也放在那里。当前 Windows 本机复制安装位于 `C:/Users/Tars/.agents/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
 
 ## 编写原则
 
