@@ -17,7 +17,7 @@
 git clone https://github.com/Avlonjune7/me.git ~/.agents/skills/me
 ```
 
-Claude Code 使用相同命令并将目标替换为 `~/.claude/skills/me`。技能可按 UI 设计与组件选型、新项目初始化、项目规范整理或开发工具安装任务自动匹配；安装后若未出现，重新开启会话。避免在同一工具的扫描范围安装多个同名副本。
+Claude Code 使用相同命令并将目标替换为 `~/.claude/skills/me`。技能可按 UI 设计与组件选型、浏览器排查与验收、新项目初始化、项目规范整理或开发工具安装任务自动匹配；安装后若未出现，重新开启会话。避免在同一工具的扫描范围安装多个同名副本。
 
 ## 结构与读取
 
@@ -50,11 +50,10 @@ README 与 CHANGELOG 供安装和维护时读取，版本统一记录在 CHANGEL
 | 网页专项审查 | web-design-guidelines | 依据项目规范和适用的 Web 标准检查，说明审查依据与覆盖缺口 |
 | 组件选型、视觉设计、现代 Web 实现 | Astryx、shadcn-vue CLI、Oil UI Pro、Modern Web Guidance | 复用项目组件和设计规范，按问题查官方资料 |
 | 浏览器验证 | Playwright CLI、BrowserSkill | 使用可用且满足登录态和验证目标的工具，报告未验证部分 |
-| 深入讨论、文档落地、领域建模 | grilling、grill-with-docs、domain-modeling | 直接完成所需讨论、文档或领域梳理 |
 
 这些能力按任务使用，安装按用户要求或项目依赖执行。Vercel 技能可用 `npx skills add vercel-labs/agent-skills --skill vercel-react-best-practices --skill web-design-guidelines --skill vercel-composition-patterns --agent codex --global --yes` 安装。web-design-guidelines 的审查流程要求获取最新远程规则，访问失败时需说明覆盖限制。
 
-在 me 的适用场景中，工具选型不明确、命令故障或大量输出需要处理时读取 [CLI 与执行效率](references/cli-efficiency.md)。当前任务有更专业的 skill 时，以专业 skill 的流程为主，me 补充个人偏好。全局代理说明文件（Codex 的 AGENTS.md / Claude Code 的 CLAUDE.md）保留条件式 me 入口，以及语言、原生环境和按需查询等始终适用的偏好。普通后端调试、修复、重构、构建测试和数据处理遵循全局及项目约定。当前 Windows 本机复制安装位于 `C:/Users/Tars/.agents/skills/me/`，全局入口带该路径兜底，其他电脑按实际安装位置调整。
+Windows 工具入口故障或需要压缩大量命令输出时读取 [CLI 偏好](references/cli-efficiency.md)。全局代理说明文件保留语言、原生环境、效率要求及按需技能入口，me 补充具体个人偏好。本机安装位于 `C:/Users/Tars/.agents/skills/me/`，同步时复用该目录。
 
 ## 编写原则
 
